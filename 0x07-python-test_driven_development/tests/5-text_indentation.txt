@@ -1,0 +1,47 @@
+a function that prints a text with 2 new lines after each of these characters: ., ? and :
+
+    Prototype: def text_indentation(text):
+    text must be a string, otherwise raise a TypeError exception with the message text must be a string
+    There should be no space at the beginning or at the end of each printed line
+1.control test:
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Hi. There: ok")
+Hi.
+<BLANKLINE>
+There:
+<BLANKLINE>
+ok
+
+2.Space at Front:
+>>> text_indentation("  Hi.There:ok")
+Hi.
+<BLANKLINE>
+There:
+<BLANKLINE>
+ok
+
+3.Space after . , ?  or : :
+ok>>> text_indentation("Hi.   There:ok")
+Hi.
+<BLANKLINE>
+There:
+<BLANKLINE>
+ok
+
+4.Text is not string:
+>>> text_indentation(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/davy/Desktop/alx-higher_level_programming/0x07-python-test_driven_development/5-text_indentation.py", line 15, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+
+5.Text is only spaces:
+>>> text_indentation("      ")
+
+6.Text is space plus a '.' or '?':
+>>> text_indentation("     .")
+.
+<BLANKLINE>
+
+

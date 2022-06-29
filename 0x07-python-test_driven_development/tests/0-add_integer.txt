@@ -1,0 +1,50 @@
+This test only tests one function
+
+function with both a and b:
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> print(add_integer(1, 2))
+3
+
+function called with only a passed:
+>>> print(add_integer(1))
+99
+
+function called with b as float:
+>>> print(add_integer(1,2.5))
+3
+
+function called with 'a' being a string:
+>>> print(add_integer('a',78))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/davy/Desktop/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 17, in add_integer
+    raise TypeError("a must be an integer")
+TypeError: a must be an integer
+
+function called with b as a string:
+>>> print(add_integer(1,"2"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/davy/Desktop/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 19, in add_integer
+    raise TypeError("b must be an integer")
+TypeError: b must be an integer
+
+if a is None:
+>>> print(add_integer(None))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/davy/Desktop/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 17, in add_integer
+    raise TypeError("a must be an integer")
+TypeError: a must be an integer
+
+if b is None:
+>>> print(add_integer(1,None))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/davy/Desktop/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 19, in add_integer
+    raise TypeError("b must be an integer")
+TypeError: b must be an integer
+
+a or b is negative:
+>>> print(add_integer(-1,-1.0))
+-2
