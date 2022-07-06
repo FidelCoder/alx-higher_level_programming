@@ -1,0 +1,36 @@
+A test doc for 1-my_list.py
+
+1. Control test:
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.append(5)
+>>> my_list.append(3)
+>>> print(my_list)
+[1, 2, 5, 3]
+
+2. Sorted test
+>>> my_list.print_sorted()
+[1, 2, 3, 5]
+
+3. empty list
+>>> my_list2 = MyList()
+>>> print(my_list2)
+[]
+>>> my_list2.print_sorted()
+[]
+
+4. list with str and integer
+>>> my_list2.append('a')
+>>> my_list2.append(1)
+>>> my_list2.append(4)
+>>> my_list2.append('df')
+>>> my_list2.append(6)
+>>> my_list2.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/davy/Desktop/alx-higher_level_programming/0x0A-python-inheritance/1-my_list.py", line 13, in print_sorted
+    print(sorted(self))
+TypeError: '<' not supported between instances of 'int' and 'str'
+
